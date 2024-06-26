@@ -9,6 +9,9 @@
 # testing
 /coverage
 
+# server
+/backend/node_modules
+
 # next.js
 /.next/
 /out/
