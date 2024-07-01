@@ -12,7 +12,17 @@ function ProductPage() {
 
 	console.log(products);
 
-	return <div style={{ color: 'blue' }}>hello next</div>;
+	return (
+		<div>
+			<h1>상품 목록 페이지</h1>
+			<ul>
+				{products &&
+					products.map(product => {
+						return <li key={product.id}>{product.name}</li>;
+					})}
+			</ul>
+		</div>
+	);
 }
 
 export default ProductPage;
