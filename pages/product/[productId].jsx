@@ -7,10 +7,10 @@ export default function ProductDetailPage({ productDetail }) {
 	const headerTitle = '상품 상세 정보 페이지';
 
 	return (
-		<>
+		<div>
 			<ProductHeader title={headerTitle} />
 			<ProductInfo productDetail={productDetail}></ProductInfo>
-		</>
+		</div>
 	);
 }
 

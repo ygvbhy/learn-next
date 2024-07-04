@@ -1,6 +1,6 @@
 import axios from 'axios';
 import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './ProductList.module.css';
 import Link from 'next/link';
 import { fetchProducts } from '@/api';
