@@ -1,7 +1,13 @@
 import Image from 'next/image';
 import styles from './ProductInfo.module.css';
+import { useRouter } from 'next/router';
 
 export default function ProductInfo({ productDetail }) {
+	const router = useRouter();
+	const addCart = () => {
+		router.push('/cart');
+	};
+
 	return (
 		<div className={styles.container}>
 			<div>
@@ -15,7 +21,7 @@ export default function ProductInfo({ productDetail }) {
 			<div className={styles.description}>
 				<p>{productDetail.name}</p>
 				<p>${productDetail.price}</p>
-				<button>장바구니 담기</button>
+				<button onClick={addCart}>장바구니 담기</button>
 			</div>
 		</div>
 	);
