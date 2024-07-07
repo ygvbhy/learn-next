@@ -1,11 +1,17 @@
 import Image from 'next/image';
 import React from 'react';
 import styles from './CartList.module.css';
+import { removeCartsItem } from '@/api';
 
 export default function CartList({ carts }) {
 	const totalPrice = carts.reduce((acc, cur) => {
 		return acc + +cur.price;
 	}, 0);
+
+	const removeCart = async id => {
+		await removeCartsItem(id);
+		alert('삭제가 되었습니다.');
+	};
 
 	return (
 		<>
@@ -25,6 +31,7 @@ export default function CartList({ carts }) {
 								<div className={styles.dexcription}>
 									<div>{cart.name}</div>
 									<div>${cart.price}</div>
+									<button onClick={() => removeCart(cart.id)}>삭제하기</button>
 								</div>
 							</li>
 						);
