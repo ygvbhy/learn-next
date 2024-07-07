@@ -7,8 +7,7 @@ export default function ProductInfo({ productDetail }) {
 	const router = useRouter();
 	const { name, imageUrl, price } = productDetail;
 	const addCart = async () => {
-		const response = await createCartItem(productDetail);
-		console.log(response);
+		await createCartItem(productDetail);
 		alert('장바구니에 추가되었습니다.');
 		router.push('/cart');
 	};

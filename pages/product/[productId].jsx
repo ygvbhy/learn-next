@@ -1,6 +1,6 @@
 import { fetchProductsItem } from '@/api';
 import ProductHeader from '@/components/ProductHeader';
-import ProductInfo from '@/components/ProductInfo';
+import ProductInfo from '@/components/product-detail/ProductInfo';
 import React from 'react';
 
 export default function ProductDetailPage({ productDetail }) {
