@@ -183,12 +183,6 @@
   ],
   "carts": [
     {
-      "id": "2",
-      "name": "Handcrafted Frozen Pizza",
-      "price": "315.00",
-      "imageUrl": "https://cdn.pixabay.com/user/2016/06/01/15-27-35-456_250x250.jpg"
-    },
-    {
       "id": "0",
       "name": "Refined Fresh Chicken",
       "price": "209.00",
