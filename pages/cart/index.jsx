@@ -6,7 +6,7 @@ function CartPage({ carts }) {
 	return (
 		<div>
 			<CartHeader></CartHeader>
-			<CartList></CartList>
+			<CartList carts={carts}></CartList>
 		</div>
 	);
 }
