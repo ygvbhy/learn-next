@@ -14,8 +14,12 @@ function Counter() {
 	return (
 		<div>
 			<p data-cy="counter">{counter}</p>
-			<button onClick={increaseCounter}>+</button>
-			<button onClick={decreaseCounter}>-</button>
+			<button onClick={increaseCounter} data-cy="add-button">
+				+
+			</button>
+			<button onClick={decreaseCounter} data-cy="minus-button">
+				-
+			</button>
 		</div>
 	);
 }
