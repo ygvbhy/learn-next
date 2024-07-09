@@ -13,7 +13,7 @@ function Counter() {
 
 	return (
 		<div>
-			<p>{counter}</p>
+			<p data-cy="counter">{counter}</p>
 			<button onClick={increaseCounter}>+</button>
 			<button onClick={decreaseCounter}>-</button>
 		</div>
