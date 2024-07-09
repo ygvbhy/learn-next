@@ -1,5 +1,24 @@
 import ProductHeader from '@/components/ProductHeader';
 import ProductList from '@/components/product-list/ProductList';
+import { useState } from 'react';
+
+function Counter() {
+	const [counter, setCounter] = useState(0);
+	const increaseCounter = () => {
+		setCounter(counter + 1);
+	};
+	const decreaseCounter = () => {
+		setCounter(counter - 1);
+	};
+
+	return (
+		<div>
+			<p>{counter}</p>
+			<button onClick={increaseCounter}>+</button>
+			<button onClick={decreaseCounter}>-</button>
+		</div>
+	);
+}
 
 function ProductPage() {
 	// 이렇게 넣어도 되고 그냥 변경되지 않는 값이라면 string 값
@@ -8,8 +27,9 @@ function ProductPage() {
 
 	return (
 		<div>
-			<ProductHeader title={headerTitle} />
-			<ProductList />
+			{/* <ProductHeader title={headerTitle} /> */}
+			{/* <ProductList /> */}
+			<Counter></Counter>
 		</div>
 	);
 }
