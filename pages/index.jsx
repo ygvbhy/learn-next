@@ -31,9 +31,9 @@ function ProductPage() {
 
 	return (
 		<div>
-			{/* <ProductHeader title={headerTitle} /> */}
-			{/* <ProductList /> */}
-			<Counter></Counter>
+			<ProductHeader title={headerTitle} />
+			<ProductList />
+			{/* <Counter></Counter> */}
 		</div>
 	);
 }
