@@ -1,3 +1,4 @@
+const ALERT_MESSAGE = '장바구니에 추가되었습니다.';
 describe('상품 상세 페이지', () => {
 	beforeEach(() => {
 		cy.visit('/product/0');
@@ -27,7 +28,7 @@ describe('상품 상세 페이지', () => {
 		cy.getByCy('cart-button')
 			.click()
 			.then(() => {
-				expect(stub.getCall(0)).to.be.calledWith('장바구니에 추가되었습니다.');
+				expect(stub.getCall(0)).to.be.calledWith(ALERT_MESSAGE);
 			});
 	});
 });

@@ -11,6 +11,9 @@ module.exports = {
 		'no-undef': 'error',
 		// 'unused-imports/no-unused-imports': 'error',
 
+		// 싸이프레스 관련 규칙
+		'cypress/unsafe-to-chain-command': 'off',
+
 		// 프리티어 설정
 		'prettier/prettier': [
 			'error',
