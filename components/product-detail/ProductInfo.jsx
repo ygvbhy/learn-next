@@ -26,7 +26,9 @@ export default function ProductInfo({ productDetail }) {
 			<div className={styles.description}>
 				<p data-cy="product-name">{name}</p>
 				<p data-cy="product-price">${price}</p>
-				<button onClick={addCart}>장바구니 담기</button>
+				<button data-cy="cart-button" onClick={addCart}>
+					장바구니 담기
+				</button>
 			</div>
 		</div>
 	);
