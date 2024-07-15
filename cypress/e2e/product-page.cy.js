@@ -19,5 +19,6 @@ describe('상품 목록 페이지', () => {
 		// 접속 한 현재 페이지의 url 을 가져와서 뒤의 문자열과 같은 지 비교
 		// assertion - 보장
 		cy.url().should('include', '/cart');
+		cy.getByCy('cart-header').should('be.visible');
 	});
 });
