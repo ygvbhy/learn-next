@@ -32,7 +32,12 @@ describe('상품 목록 페이지', () => {
 
 	// 네 번째 테스트 시나리오 - API 모킹
 	it('상품 목록이 3개면 화면에 3개 상품이 표시된다.', () => {
-		cy.intercept('/products', THREE_PRODUCT_ITEMS);
+		// intercept 의 별칭을 지정 해주기
+		cy.intercept('/products', THREE_PRODUCT_ITEMS).as('getProducts');
 		cy.visit('/');
+		// 해당 별칭이 완료 될때까지 기다려줌 - cy 의 기본 대기 시간이 4000ms 정도라 위의 코드가 끝날때 까지 기다려 줌 - 별칭은 @ 붙여서 표현
+		cy.wait('@getProducts');
+		// 끝나면 불러온 리스트의 갯수를 셈
+		cy.getByCy('product-item').should('have.length', 3);
 	});
 });
