@@ -31,4 +31,10 @@ describe('상품 상세 페이지', () => {
 				expect(stub.getCall(0)).to.be.calledWith(ALERT_MESSAGE);
 			});
 	});
+
+	// 세 번째 테스트 시나리오
+	it.only('장바구니 버튼을 클릭하면 장바구니 페이지로 이동 한다.', () => {
+		cy.getByCy('cart-button').click();
+		cy.url().should('include', '/cart');
+	});
 });
