@@ -21,4 +21,10 @@ describe('상품 목록 페이지', () => {
 		cy.url().should('include', '/cart');
 		cy.getByCy('cart-header').should('be.visible');
 	});
+
+	// 세 번째 테스트 시나리오
+	it('상품 목록의 아이템을 클릭하면 상품 상세 페이지로 이동한다.', () => {
+		cy.getByCy('product-item').first().click();
+		cy.url().should('include', '/product/');
+	});
 });
